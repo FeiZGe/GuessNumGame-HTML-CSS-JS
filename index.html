@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============= META Tags ============= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============= TITLE ============= -->
+    <title>Guess Number Game</title>
+
+    <!-- ============= LINK STYLE ============= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <section class="container">
+        <!-- ============= Start Show-Status ============= -->
+        <article class="status-bar">
+            <div class="status-bar-text">Welcome!</div>
+        </article>
+        <!-- ============= End Show-Status ============= -->
+
+        <!-- ============= Start Card ============= -->
+        <article class="guess-card">
+            <div class="card-title">Guess a <span>number</span> between 1-100</div>
+            <form name="guessBox">
+                <input type="text" name="GuessNum" class="card-input" required>
+                <button type="submit" class="card-btn-submit">ENTER</button>
+            </form>
+
+            <!-- ENTER Button -->
+            <script type="text/javascript">
+                // Using jQuery.
+                
+                $(document).ready(function() {
+
+                    $('.card-input').keydown(function(event) {
+                        // enter has keyCode = 13
+                        if (event.keyCode == 13) {
+                            this.form.submit();
+                            return false;
+                        }
+                    });
+                });
+            </script>
+            <!-- ENTER Button -->
+
+            <div class="card-input-status">
+                <p class="text">invaild</p>
+            </div>
+        </article>
+        <!-- ============= End Card ============= -->
+    </section>
+
+    <script src="assets/features/index.js"></script>
+</body>
+</html>
