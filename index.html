@@ -16,37 +16,21 @@
     <section class="container">
         <!-- ============= Start Show-Status ============= -->
         <article class="status-bar">
-            <div class="status-bar-text">Welcome!</div>
+            <div class="status-bar-text">
+                <h2>Welcome!</h2>
+                <p id="statusText"></p>
+            </div>
         </article>
         <!-- ============= End Show-Status ============= -->
 
         <!-- ============= Start Card ============= -->
         <article class="guess-card">
-            <div class="card-title">Guess a <span>number</span> between 1-100</div>
-            <form name="guessBox">
-                <input type="text" name="GuessNum" class="card-input" required>
-                <button type="submit" class="card-btn-submit">ENTER</button>
-            </form>
-
-            <!-- ENTER Button -->
-            <script type="text/javascript">
-                // Using jQuery.
-                
-                $(document).ready(function() {
-
-                    $('.card-input').keydown(function(event) {
-                        // enter has keyCode = 13
-                        if (event.keyCode == 13) {
-                            this.form.submit();
-                            return false;
-                        }
-                    });
-                });
-            </script>
-            <!-- ENTER Button -->
+            <div class="card-title">Guess a <span>number</span> between <span id="minmaxRange">1-100</span></div>
+            <input type="text" id="GuessNum" class="card-input">
+            <button id="enterBTN" class="card-btn-submit">ENTER</button>
 
             <div class="card-input-status">
-                <p class="text">invaild</p>
+                <p class="text" id="invaildText"></p>
             </div>
         </article>
         <!-- ============= End Card ============= -->

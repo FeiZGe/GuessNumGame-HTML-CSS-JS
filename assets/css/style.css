@@ -32,11 +32,20 @@ body {
 
 /* ===== Status-bar ===== */
 .status-bar {
-    margin: 25%;
+    margin: 20% 0;
+    width: 50vh;
 
     & .status-bar-text {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: bolder;
+        padding: auto;
+        margin: 10px;
+        text-align: center;
+
+        & p {
+            font-size: 0.7em;
+            color: #4a5078;
+        }
     }
 }
 /* ===== Status-bar ===== */
@@ -61,34 +70,27 @@ body {
         }
     }
 
-    & form {
-        display: flex;
-        flex-direction: column;
+    & .card-input {
+        margin-bottom: 1rem;
+        height: 44px;
+        background-color: #05060f0a;
+        border-radius: .5rem;
+        padding: 0 1rem;
+        border: 2px solid transparent;
+        font-size: 1rem;
+        transition: border-color .3s
+    }
 
-        & .card-input {
-            margin-bottom: 1rem;
-            height: 44px;
-            background-color: #05060f0a;
-            border-radius: .5rem;
-            padding: 0 1rem;
-            border: 2px solid transparent;
-            font-size: 1rem;
-            transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s,
-            color .3s cubic-bezier(.25,.01,.25,1) 0s,
-            background .2s cubic-bezier(.25,.01,.25,1) 0s;
-        }
-    
-        & .card-btn-submit {
-            padding: 1rem;
-            margin-bottom: 0.25rem;
-            border: 0;
-            border-radius: 100px;
-            background-color: #2ba8fb;
-            color: #ffffff;
-            font-weight: Bold;
-            transition: 0.5s;
+    & .card-btn-submit {
+        padding: 1rem;
+        margin-bottom: 0.25rem;
+        border: 0;
+        border-radius: 100px;
+        background-color: #2ba8fb;
+        color: #ffffff;
+        font-weight: Bold;
+        transition: 0.5s;
 
-        }
     }
 
     & .card-input-status {
@@ -105,6 +107,10 @@ body {
     box-shadow: 0 0 20px #6fc5ff50;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.card-btn-submit:active {
+    background-color: #33adff;
 }
 
 /* ===== Animated ===== */
